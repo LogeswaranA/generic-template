@@ -5,7 +5,7 @@ import { DocumentQrCode } from "../../core/DocumentQrCode";
 import { Wrapper } from "../../core/Wrapper";
 import { ChaftaCooDocumentSchema, ChaftaCooDocument } from "./types";
 import { getDocumentData } from "./../../utils";
-import { secondSignatoryAuthentication } from "../../core/Signatures";
+import { secondSignatoryAuthentication,networkSignature } from "../../core/Signatures";
 
 const getValue = (id?: string): string | undefined => {
   if (!id) return undefined;
@@ -366,6 +366,24 @@ export const CertificationSection: FunctionComponent<ChaftaCooDocument> = () => 
   );
 };
 
+export const NetworkSection: FunctionComponent<ChaftaCooDocument> = () => {
+  return (
+    <div className="border p-2 h-full">
+      <div className="flex flex-col h-full">
+        <h5 className="mb-2">15. Issued Network</h5>
+        <p>
+          This Certificte Or Origin has been issued in the following netowkr
+        </p>
+        <div className="flex-grow">
+          <img className="w-1/2 mx-auto" src={networkSignature} />
+        </div>
+        <UnderlineDashed />
+        <p>Place, date and signature of authorised person</p>
+      </div>
+    </div>
+  );
+};
+
 export const ChaftaCooTemplate: FunctionComponent<ChaftaCooTemplateProps> = (props) => {
   const [isPrivacyOn, setIsPrivacyOn] = useState(false);
   const { document, handleObfuscation } = props;
@@ -431,6 +449,9 @@ export const ChaftaCooTemplate: FunctionComponent<ChaftaCooTemplateProps> = (pro
             </div>
             <div className="w-1/2">
               <CertificationSection />
+            </div>
+            <div className="w-1/2">
+              <NetworkSection />
             </div>
           </div>
         </div>
