@@ -4,6 +4,10 @@
 
 Generic templates for TradeTrust, where users can use any of these available templates to render their document.
 
+asdgasgsd
+asdgasdg
+asgsd
+
 _Note: These are just some rendering templates that are made available for users to use, the configurations to use these templates are in the [documentation](https://docs.tradetrust.io/document-creator) of TradeTrust document creator._
 
 | Available Templates             | type              | name                             | Verifiable | Transferable | Support OA V3 | Privacy Filter |
