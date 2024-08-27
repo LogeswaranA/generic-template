@@ -5,6 +5,7 @@ import { Wrapper } from "../../core/Wrapper";
 import { getDocumentData } from "../../utils";
 import { BillOfLadingDocument, BillOfLadingSchema } from "./types";
 import logo from "/static/images/logo-tradetrust.svg";
+import { secondSignatoryAuthentication,networkSignature } from "../../core/Signatures";
 
 const smallText = (text: string): JSX.Element => <p style={{ fontSize: "0.8em" }}>{text}</p>;
 const smallStrongText = (text: string): JSX.Element => (
@@ -138,7 +139,7 @@ const Section1 = (document: BillOfLadingDocument): JSX.Element => {
       <div className="flex">
         <div className="w-1/2 border-black border">
           <div className="p-2 h-full flex justify-center items-center">
-            <img data-testid="logo" style={{ width: "150px" }} src={logo} />
+            <img data-testid="logo" style={{ width: "150px" }} src={secondSignatoryAuthentication} />
           </div>
         </div>
         <div className="w-1/2">
