@@ -351,7 +351,7 @@ export const CertificationSection: FunctionComponent<ChaftaCooDocument> = () => 
   return (
     <div className="border p-2 h-full">
       <div className="flex flex-col h-full">
-        <h5 className="mb-2">14. Certification</h5>
+        <h5 className="mb-2">14. Certified By</h5>
         <p>
           On the basis of the control carried out, it is hereby certified that the information herein is correct and
           that the described goods comply with the origin requirements of the China-Australia Free Trade Agreement.
